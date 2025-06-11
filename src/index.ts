@@ -15,6 +15,8 @@ app.use(
       "http://localhost:4173",
       "http://localhost:5173",
       "http://localhost:5174",
+      "https://reynol-frontend-m7adbx3v4-mjlopezs-projects.vercel.app/",
+      "http://reynol-frontend-m7adbx3v4-mjlopezs-projects.vercel.app/"
     ],
     credentials: true,
   })
