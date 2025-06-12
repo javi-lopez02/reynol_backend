@@ -3,7 +3,6 @@ import cors from "cors";
 import morgan from "morgan";
 import * as dotenv from "dotenv";
 import users from "./Routes/user.routes";
-import { initializeDatabase } from "./database";
 
 dotenv.config();
 
@@ -30,17 +29,6 @@ app.use(morgan("dev"));
 
 app.use("/users", users);
 
-async function startServer() {
-  try {
-    await initializeDatabase();
-
-    app.listen(port, () => {
-      console.log(`Servidor corriendo en puerto ${port}`);
-    });
-  } catch (error) {
-    console.error("Error iniciando servidor:", error);
-    process.exit(1);
-  }
-}
-
-startServer();
+app.listen(port, () => {
+  console.log(`Servidor corriendo en puerto ${port}`);
+});
